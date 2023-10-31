@@ -6,13 +6,5 @@ public class HelloWorld {
 
 
     System.out.println(intro);
-    //System.out.println(Author);
     }
-    public class Author{
-        Author Dante = new Author();
-        static String name = "Danté";
-        int age = 23;
-        String nationality = "British";
-    }
-
 }
