@@ -4,13 +4,16 @@ public class Author {
     public String name;
     public int age;
     public String nationality;
+    public String gender;
 
-    public Author(String name, int age, String nationality){
+    public Author(String name, int age, String nationality, String gender){
         super();
         this.name = name;
         this.age = age;
         this.nationality = nationality;
+        this.gender = gender;
     }
+
     public void sleep() {
         if (age < 10) {
             System.out.println(name + " will sleep more than 12 hours in a day");
