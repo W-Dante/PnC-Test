@@ -1,6 +1,10 @@
 package course.mainMethod;
 
-public class CreatedBy {
+public class CreatedBy extends Author{
+    public CreatedBy(String name, int age, String nationality, String gender) {
+        super(name, age, nationality, gender);
+    }
+
     public static void authorDetails(){
         System.out.println("Some information about the author: ");
     }
