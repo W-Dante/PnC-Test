@@ -9,10 +9,13 @@ public class HelloWorld extends HomePageIntro{
         Author Dante = new Author("Danté", 23, "British","Male");
 
         HPIntro();
+        System.out.println("\n");
+        System.out.println(Dante.name + " is a " + Dante.age + " years old " + Dante.gender + ".");
+        System.out.println(Dante.name + " is " + Dante.nationality + " and Jamaican.");
 
 
 
-    System.out.println("\n\n\n");
+    System.out.println("\n\n");
 
     System.out.println("Created by " + Dante.name);
     }
