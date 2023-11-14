@@ -11,7 +11,7 @@ public class CreatedBy extends Author{
 
 
     public static void main(String[] args) {
-        Author Dante = new Author("Dante", 23, "British","Male");
+        Author Dante = new Author("Dante", 23, "British Jamaican","Male");
         authorDetails();
 
         System.out.println(Dante.name + " is the name of the author.");
