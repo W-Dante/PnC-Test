@@ -6,12 +6,12 @@ public class HelloWorld extends HomePageIntro{
     }
 
     public static void main(String[] args) {
-        Author Dante = new Author("Danté", 23, "British","Male");
+        Author Dante = new Author("Danté", 23, "British Jamaican","Male");
 
         HPIntro();
         System.out.println("\n");
         System.out.println(Dante.name + " is a " + Dante.age + " years old " + Dante.gender + ".");
-        System.out.println(Dante.name + " is " + Dante.nationality + " and Jamaican.");
+        System.out.println(Dante.name + " is " + Dante.nationality + ".");
 
 
 
