@@ -16,6 +16,4 @@ System.out.print(border);
         System.out.print("This is a test Project based my knowledge of Git, Github &  Java." +
                 "\nIf there are any bugs, then write a ticket or a note beside it.");
     }
-
-
 }
