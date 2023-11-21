@@ -5,8 +5,8 @@ import java.util.Locale;
 import java.util.Objects;
 import java.util.Scanner;
 
-
-public class PlugNCharge {
+//Declaration
+public class PlugNCharge extends Protocol{
     public static void main(String[] args) {
         Scanner Keyboard = new Scanner(System.in);
         String onboarding;
@@ -21,6 +21,7 @@ public class PlugNCharge {
         "Switch", "Smartic", "EVWAY", "Stations-e", "EKOEN"};
         String[] EVSE = {"Hypercharger", "i-charging", "Kempower", "Autel", "Evtec Quality", "Delta"};
 
+        //PnC Ecosystem Overview
         System.out.printf("%-50s %50s %n","   ","THE PLUG & CHARGE ECOSYSTEM OVERVIEW\n");
         System.out.println("\tOEMs: EV Manufacturers\t\tEMPs: eMobility Providers\t\t" +
                 "CPOs: Charge Point Operators\t\tBEPs: Backend Providers\t\tEVSE: Electric Vehicle Supply Equipment");
@@ -41,30 +42,45 @@ public class PlugNCharge {
         }
         System.out.println("\n");
 
+        //Onboarding Companies @ Hubject
         System.out.print("Hubject currently has onboarding organisations. In which section would you like " +
                 "to view (OEM / EMP / CPO / BEP / EVSE) : ");
         onboarding = Keyboard.next().toUpperCase(Locale.ROOT);
         if (Objects.equals(onboarding, "OEM")){
-            System.out.println("\nCURRENTLY ONBOARDING:\t Scania, Renault & Polestar");}
+            System.out.println("\nCURRENTLY ONBOARDING:\t Scania, Renault & Polestar\n");}
         else if (Objects.equals(onboarding, "EMP")){
-            System.out.println("\nCURRENTLY ONBOARDING:\t Bosch, Plugsurfing, Virta, Monta, Carge");
+            System.out.println("\nCURRENTLY ONBOARDING:\t Bosch, Plugsurfing, Virta, Monta, Carge\n");
         }
         else if (Objects.equals(onboarding, "CPO")) {
-            System.out.println("\nCURRENTLY ONBOARDING:\t Blink, Zunger Charging Hero, Mer, Sdey, Compleo, TotalEnergies, EVgo, Allego, Vattenfall");
+            System.out.println("\nCURRENTLY ONBOARDING:\t Blink, Zunger Charging Hero, Mer, Sdey, Compleo, TotalEnergies, EVgo, Allego, Vattenfall\n");
         }
         else if (Objects.equals(onboarding, "BEP")) {
-            System.out.println("\nCURRENTLY ONBOARDING:\t IBIL, Chargecloud, SmartILab, Ampeco");
+            System.out.println("\nCURRENTLY ONBOARDING:\t IBIL, Chargecloud, SmartILab, Ampeco\n");
         }
         else if (Objects.equals(onboarding, "EVSE")){
-                System.out.println("\nPLUG&CHARGE CAPABLE:\t Chargebyte, Alfen, Porsche, ebee");
+                System.out.println("\nPLUG&CHARGE CAPABLE:\t Chargebyte, Alfen, Porsche, ebee\n");
             }
         else{
             System.out.println("\nThis is an invalid input.");
             System.exit(0);
         }
+
+        //ISO15118
+        for (int i = 0; i < 170; i++) {
+            System.out.print("=");
+            try {
+                Thread.sleep(30);
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+                System.out.print("\n");
+            }
+            //new Protocol();
+        }
     }
 
-    public static void PnC( ){
+    //Title & Introduction to PnC
+    public static void PnC(){
         System.out.println("\n" +
                 "  _____  _     _    _  _____         _____ _    _          _____   _____ ______             _    _ _    _ ____       _ ______ _____ _______ \n" +
                 " |  __ \\| |   | |  | |/ ____| ___   / ____| |  | |   /\\   |  __ \\ / ____|  ____|    ____   | |  | | |  | |  _ \\     | |  ____/ ____|__   __|\n" +
@@ -93,19 +109,20 @@ public class PlugNCharge {
         PnCProcess();
     }
 
+    //Introduction to PnC Process
     public static void PnCProcess(){
         try{
             System.out.println("This is how Plug & Charge works: ".toUpperCase(Locale.ROOT));
             System.out.println("-".repeat(60) + "\n");
             Thread.sleep(6000);
             System.out.println("Step 1:\tCommunication between the EV and charging station starts as soon as the plug is inserted into the charging socket.\n");
-            Thread.sleep(9000);
+            Thread.sleep(6000);
             System.out.println("Step 2:\tThe EV's charging contract is identified and matched with its eMobility Service Provider, completing the authentication process.\n");
-            Thread.sleep(9000);
+            Thread.sleep(6000);
             System.out.println("Step 3:\tWithin seconds, the charging session begins.\n");
-            Thread.sleep(9000);
+            Thread.sleep(6000);
             System.out.println("Step 4:\tThe price of the charging session is calculated automatically and an invoice is sent to all parties involved.\n");
-            Thread.sleep(9000);
+            Thread.sleep(6000);
         }
         catch (InterruptedException e){
             e.printStackTrace();
@@ -122,3 +139,4 @@ public class PlugNCharge {
         System.out.println("\n");
     }
 }
+
