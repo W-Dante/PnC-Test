@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
 
+
 public class PlugNCharge {
     public static void main(String[] args) {
         Scanner Keyboard = new Scanner(System.in);
@@ -18,16 +19,18 @@ public class PlugNCharge {
         String[] BackendProviders = {"Virta", "Deftpower", "Longship.io", "Grid & Co.", "be ENERGISED", "greenflux",
         "Switch", "Smartic", "EVWAY", "Stations-e", "EKOEN"};
 
-
-        System.out.println("\t\t\t\t\t\t\t\t\tTHE PLUG & CHARGE ECOSYSTEM OVERVIEW\n");
+        System.out.printf("%-50s %50s %n","   ","THE PLUG & CHARGE ECOSYSTEM OVERVIEW\n");
+        System.out.println("\t\t\tOEMs: EV Manufacturers\t\tEMPs: eMobility Providers\t\t" +
+                "CPOs: Charge Point Operators\t\tBEPs: Backend Providers");
+        System.out.println("\t\t"+"-".repeat(140) + "\n");
         System.out.println("- OEMS: " + Arrays.toString(OEMs));
         System.out.println("\n- EMPs: " + Arrays.toString(EMPs));
         System.out.println("\n- CPOs: " + Arrays.toString(CPOs));
         System.out.println("\n- BEPs: " + Arrays.toString(BackendProviders) + "\n");
-        for (int i = 0; i < 80; i++) {
+        for (int i = 0; i < 150; i++) {
             System.out.print("=");
             try {
-                Thread.sleep(80);
+                Thread.sleep(50);
             }
             catch (InterruptedException e) {
                 e.printStackTrace();
@@ -58,10 +61,10 @@ public class PlugNCharge {
         System.out.println("Plug&Charge enables fully automatic charging processes." +
                 "\nWith automatic authentication technology between the electric vehicle and the charging station,\n" +
                 "drivers can connect and charge their EV immediately - without apps or RFID cards.\n");
-        for (int i = 0; i < 80; i++) {
+        for (int i = 0; i < 150; i++) {
             System.out.print("=");
             try {
-                Thread.sleep(80);
+                Thread.sleep(50);
             }
             catch (InterruptedException e) {
                 e.printStackTrace();
