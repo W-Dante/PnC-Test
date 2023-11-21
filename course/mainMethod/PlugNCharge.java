@@ -1,6 +1,7 @@
 package course.mainMethod;
 
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -42,7 +43,7 @@ public class PlugNCharge {
 
         System.out.print("Hubject currently has onboarding organisations. In which section would you like " +
                 "to view (OEM / EMP / CPO / BEP / EVSE) : ");
-        onboarding = Keyboard.next();
+        onboarding = Keyboard.next().toUpperCase(Locale.ROOT);
         if (Objects.equals(onboarding, "OEM")){
             System.out.println("\nCURRENTLY ONBOARDING:\t Scania, Renault & Polestar");}
         else if (Objects.equals(onboarding, "EMP")){
@@ -64,8 +65,17 @@ public class PlugNCharge {
     }
 
     public static void PnC( ){
-        System.out.println("Plug&Charge enables fully automatic charging processes." +
-                "\nWith automatic authentication technology between the electric vehicle and the charging station,\n" +
+        System.out.println("\n" +
+                "  _____  _     _    _  _____         _____ _    _          _____   _____ ______             _    _ _    _ ____       _ ______ _____ _______ \n" +
+                " |  __ \\| |   | |  | |/ ____| ___   / ____| |  | |   /\\   |  __ \\ / ____|  ____|    ____   | |  | | |  | |  _ \\     | |  ____/ ____|__   __|\n" +
+                " | |__) | |   | |  | | |  __ ( _ ) | |    | |__| |  /  \\  | |__) | |  __| |__      / __ \\  | |__| | |  | | |_) |    | | |__ | |       | |   \n" +
+                " |  ___/| |   | |  | | | |_ |/ _ \\/\\ |    |  __  | / /\\ \\ |  _  /| | |_ |  __|    / / _` | |  __  | |  | |  _ < _   | |  __|| |       | |   \n" +
+                " | |    | |___| |__| | |__| | (_>  < |____| |  | |/ ____ \\| | \\ \\| |__| | |____  | | (_| | | |  | | |__| | |_) | |__| | |___| |____   | |   \n" +
+                " |_|    |______\\____/ \\_____|\\___/\\/\\_____|_|  |_/_/    \\_\\_|  \\_\\\\_____|______|  \\ \\__,_| |_|  |_|\\____/|____/ \\____/|______\\_____|  |_|   \n" +
+                "                                                                                   \\____/                                                   \n" +
+                "                                                                                                                                            \n");
+        System.out.println("Plug & Charge enables fully automatic charging processes." +
+                "\nWith automatic authentication technology between the electric vehicle and the charging station," +
                 "drivers can connect and charge their EV immediately - without apps or RFID cards.\n\n" +
                 "The entire charging process, from authentication to initiation to billing, happens instantly & autonomously.\n" +
                 "Your customer's data is always shielded from hacking and fraud by ISO 15118.\n");
@@ -85,7 +95,7 @@ public class PlugNCharge {
 
     public static void PnCProcess(){
         try{
-            System.out.println("This is how Plug & Charge works: ");
+            System.out.println("This is how Plug & Charge works: ".toUpperCase(Locale.ROOT));
             System.out.println("-".repeat(60) + "\n");
             Thread.sleep(6000);
             System.out.println("Step 1:\tCommunication between the EV and charging station starts as soon as the plug is inserted into the charging socket.\n");
