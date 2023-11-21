@@ -66,7 +66,40 @@ public class PlugNCharge {
     public static void PnC( ){
         System.out.println("Plug&Charge enables fully automatic charging processes." +
                 "\nWith automatic authentication technology between the electric vehicle and the charging station,\n" +
-                "drivers can connect and charge their EV immediately - without apps or RFID cards.\n");
+                "drivers can connect and charge their EV immediately - without apps or RFID cards.\n\n" +
+                "The entire charging process, from authentication to initiation to billing, happens instantly & autonomously.\n" +
+                "Your customer's data is always shielded from hacking and fraud by ISO 15118.\n");
+        for (int i = 0; i < 170; i++) {
+            System.out.print("=");
+            try {
+                Thread.sleep(30);
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("\n");
+
+        PnCProcess();
+    }
+
+    public static void PnCProcess(){
+        try{
+            System.out.println("This is how Plug & Charge works: ");
+            System.out.println("-".repeat(60) + "\n");
+            Thread.sleep(6000);
+            System.out.println("Step 1:\tCommunication between the EV and charging station starts as soon as the plug is inserted into the charging socket.\n");
+            Thread.sleep(9000);
+            System.out.println("Step 2:\tThe EV's charging contract is identified and matched with its eMobility Service Provider, completing the authentication process.\n");
+            Thread.sleep(9000);
+            System.out.println("Step 3:\tWithin seconds, the charging session begins.\n");
+            Thread.sleep(9000);
+            System.out.println("Step 4:\tThe price of the charging session is calculated automatically and an invoice is sent to all parties involved.\n");
+            Thread.sleep(9000);
+        }
+        catch (InterruptedException e){
+            e.printStackTrace();
+        }
         for (int i = 0; i < 170; i++) {
             System.out.print("=");
             try {
@@ -78,5 +111,4 @@ public class PlugNCharge {
         }
         System.out.println("\n");
     }
-
 }
