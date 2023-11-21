@@ -19,8 +19,16 @@ public class PlugNCharge {
         System.out.println("\n- OEMS: " + Arrays.toString(OEMs));
         System.out.println("\n- EMPs: " + Arrays.toString(EMPs));
         System.out.println("\n- CPOs: " + Arrays.toString(CPOs) + "\n");
-        System.out.println("---------------------------------------------------------------" +
-                "---------------------------------------------------------------");
+        for (int i = 0; i < 80; i++) {
+            System.out.print("=");
+            try {
+                Thread.sleep(80);
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("\n\n");
 
         System.out.print("Hubject currently has onboarding organisations. In which section would you like " +
                 "to view (OEM / EMP / CPO) : ");
@@ -43,8 +51,16 @@ public class PlugNCharge {
         System.out.println("Plug&Charge enables fully automatic charging processes." +
                 "\nWith automatic authentication technology between the electric vehicle and the charging station,\n" +
                 "drivers can connect and charge their EV immediately - without apps or RFID cards.\n");
-        System.out.println("---------------------------------------------------------------" +
-                "---------------------------------------------------------------");
+        for (int i = 0; i < 80; i++) {
+            System.out.print("=");
+            try {
+                Thread.sleep(80);
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("\n");
     }
 
 }
