@@ -15,12 +15,15 @@ public class PlugNCharge {
                 "Deftpower","Ford", "Octopus Electroverse", "EVWAY", "Zunder", "AutoSense", "Stations-e"};
         String[] CPOs = {"Ionity", "BP Pulse", "Electrify America","BayWa", "Shell Recharge Solutions", "EVWAY",
                 "Porsche", "Smatric", "Stations-e", "Charzin", "EKOEN"};
-        
+        String[] BackendProviders = {"Virta", "Deftpower", "Longship.io", "Grid & Co.", "be ENERGISED", "greenflux",
+        "Switch", "Smartic", "EVWAY", "Stations-e", "EKOEN"};
+
 
         System.out.println("\t\t\t\t\t\t\t\t\tTHE PLUG & CHARGE ECOSYSTEM OVERVIEW\n");
         System.out.println("- OEMS: " + Arrays.toString(OEMs));
         System.out.println("\n- EMPs: " + Arrays.toString(EMPs));
-        System.out.println("\n- CPOs: " + Arrays.toString(CPOs) + "\n");
+        System.out.println("\n- CPOs: " + Arrays.toString(CPOs));
+        System.out.println("\n- BEPs: " + Arrays.toString(BackendProviders) + "\n");
         for (int i = 0; i < 80; i++) {
             System.out.print("=");
             try {
@@ -33,14 +36,17 @@ public class PlugNCharge {
         System.out.println("\n\n");
 
         System.out.print("Hubject currently has onboarding organisations. In which section would you like " +
-                "to view (OEM / EMP / CPO) : ");
+                "to view (OEM / EMP / CPO / BEP) : ");
         onboarding = Keyboard.next();
         if (Objects.equals(onboarding, "OEM")){
-            System.out.println("\nScania, Renault & Polestar");}
+            System.out.println("\nCURRENTLY ONBOARDING:\t Scania, Renault & Polestar");}
         else if (Objects.equals(onboarding, "EMP")){
-            System.out.println("\nBosch, Plugsurfing, Virta, Monta, Carge");}
+            System.out.println("\nCURRENTLY ONBOARDING:\t Bosch, Plugsurfing, Virta, Monta, Carge");}
         else if (Objects.equals(onboarding, "CPO")) {
-            System.out.println("\nBlink, Zunger Charging Hero, Mer, Sdey, Compleo, TotalEnergies, EVgo, Allego, Vattenfall");}
+            System.out.println("\nCURRENTLY ONBOARDING:\t Blink, Zunger Charging Hero, Mer, Sdey, Compleo, TotalEnergies, EVgo, Allego, Vattenfall");}
+        else if (Objects.equals(onboarding, "BEP")){
+            System.out.println("\nCURRENTLY ONBOARDING:\t IBIL, Chargecloud, SmartILab, Ampeco");
+        }
         else{
             System.out.println("\nThis is an invalid input.");
             System.exit(0);
