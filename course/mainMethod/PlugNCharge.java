@@ -51,18 +51,18 @@ public class PlugNCharge extends Protocol{
                 "to view (OEM / EMP / CPO / BEP / EVSE) : ");
         onboarding = Keyboard.next().toUpperCase(Locale.ROOT);
         if (Objects.equals(onboarding, "OEM")){
-            System.out.println("\nCURRENTLY ONBOARDING:\t Scania, Renault & Polestar\n");}
+            System.out.println("\nCURRENTLY ONBOARDING OEMs:\t Scania, Renault & Polestar\n");}
         else if (Objects.equals(onboarding, "EMP")){
-            System.out.println("\nCURRENTLY ONBOARDING:\t Bosch, Plugsurfing, Virta, Monta, Carge\n");
+            System.out.println("\nCURRENTLY ONBOARDING EMPs:\t Bosch, Plugsurfing, Virta, Monta, Carge\n");
         }
         else if (Objects.equals(onboarding, "CPO")) {
-            System.out.println("\nCURRENTLY ONBOARDING:\t Blink, Zunger Charging Hero, Mer, Sdey, Compleo, TotalEnergies, EVgo, Allego, Vattenfall\n");
+            System.out.println("\nCURRENTLY ONBOARDING CPOs:\t Blink, Zunger Charging Hero, Mer, Sdey, Compleo, TotalEnergies, EVgo, Allego, Vattenfall\n");
         }
         else if (Objects.equals(onboarding, "BEP")) {
-            System.out.println("\nCURRENTLY ONBOARDING:\t IBIL, Chargecloud, SmartILab, Ampeco\n");
+            System.out.println("\nCURRENTLY ONBOARDING BEPs:\t IBIL, Chargecloud, SmartILab, Ampeco\n");
         }
         else if (Objects.equals(onboarding, "EVSE")){
-                System.out.println("\nPLUG&CHARGE CAPABLE:\t Chargebyte, Alfen, Porsche, ebee\n");
+                System.out.println("\nPLUG&CHARGE CAPABLE EVSEs:\t Chargebyte, Alfen, Porsche, ebee\n");
             }
         else{
             System.out.println("\nThis is an invalid input.");
@@ -184,27 +184,24 @@ public class PlugNCharge extends Protocol{
                 "that are treating their customers to the most secure, speedy, and seamless charging experience that’s available on the market.\n\n");
         System.out.println("Responsibilities ->\n-------------------");
         try {
+            System.out.println("Charge Point Operator: Responsible for the CPO-Backend implementation of the Plug&Charge functionality.\n");
             Thread.sleep(5000);
-        } catch (InterruptedException e) {
+            System.out.println(  "eMobility Service Provider / Mobility Operator: Provider of eMobility services supporting Plug&Charge functionality and signing charging contracts with EV drivers.\n");
+            Thread.sleep(5000);
+            System.out.println("Electric Vehicle Original Equipment Manufacturer: EV Original Equipment manufacturer, responsible for the software/hardware Plug&Charge implementation in the EV.\n\n");
+            Thread.sleep(5000);
+        }
+        catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("Charge Point Operator: Responsible for the CPO-Backend implementation of the Plug&Charge functionality.\n");
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        System.out.println(  "eMobility Service Provider / Mobility Operator: Provider of eMobility services supporting Plug&Charge functionality and signing charging contracts with EV drivers.\n");
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        System.out.println("Electric Vehicle Original Equipment Manufacturer: EV Original Equipment manufacturer, responsible for the software/hardware Plug&Charge implementation in the EV.\n\n");
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+        for (int i = 0; i < 170; i++) {
+            System.out.print("=");
+            try {
+                Thread.sleep(30);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+                System.out.print("\n");
+            }
         }
     }
 }
