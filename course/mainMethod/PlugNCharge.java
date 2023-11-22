@@ -111,6 +111,9 @@ public class PlugNCharge extends Protocol{
                 System.out.print("\n");
             }
         }
+
+        responsilibities();
+
     }
 
     //Title & Introduction to PnC
@@ -171,6 +174,38 @@ public class PlugNCharge extends Protocol{
             }
         }
         System.out.println("\n");
+    }
+
+    //Responsibilities of OEM, CPO, EMP & MO
+    public static void responsilibities(){
+        System.out.println("\n\n\t\t\tCHARGING MADE SIMPLE AND SCALABLE");
+        System.out.println("\t\t"+"-".repeat(40) + "\n");
+        System.out.println("Join the rapidly-growing number of car manufacturers, charge point operators, and eMobility service providers\n" +
+                "that are treating their customers to the most secure, speedy, and seamless charging experience that’s available on the market.\n\n");
+        System.out.println("Responsibilities ->\n-------------------");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("Charge Point Operator: Responsible for the CPO-Backend implementation of the Plug&Charge functionality.\n");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(  "eMobility Service Provider / Mobility Operator: Provider of eMobility services supporting Plug&Charge functionality and signing charging contracts with EV drivers.\n");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("Electric Vehicle Original Equipment Manufacturer: EV Original Equipment manufacturer, responsible for the software/hardware Plug&Charge implementation in the EV.\n\n");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
 
