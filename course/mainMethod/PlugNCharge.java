@@ -114,6 +114,8 @@ public class PlugNCharge extends Protocol{
 
         responsilibities();
 
+        Author Dante = new Author("Danté Whyte",23,"British Jamaican","Male");
+        System.out.println("\nCreated by " + Dante.name + " ©");
     }
 
     //Title & Introduction to PnC
@@ -144,6 +146,7 @@ public class PlugNCharge extends Protocol{
         System.out.println("\n");
 
         PnCProcess();
+
     }
 
     //Introduction to PnC Process
@@ -204,5 +207,6 @@ public class PlugNCharge extends Protocol{
             }
         }
     }
+
 }
 
