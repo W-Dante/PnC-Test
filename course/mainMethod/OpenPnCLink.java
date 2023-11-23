@@ -12,7 +12,7 @@ public class OpenPnCLink {
 
         Desktop desktop = Desktop.getDesktop();
         try {
-            URI uri = new URI("https://www.hubject.com/openplugncharge");
+            URI uri = new URI("https://www.hubject.com/products/plug-and-charge");
             desktop.browse(uri);
         } catch (Exception e) {
             e.printStackTrace();
