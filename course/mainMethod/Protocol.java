@@ -1,9 +1,14 @@
 package course.mainMethod;
 
-public class Protocol {
+public class Protocol extends OpenPnCLink{
         public String title;
         public String beginning;
         public String V2G;
+
+    public static void main(String[] args) {
+OpenPnCLink website = new OpenPnCLink();
+        System.out.println(website);
+    }
 
 
 
@@ -15,6 +20,7 @@ public class Protocol {
         this.V2G = V2G;
 
     }
+
 }
 
 
