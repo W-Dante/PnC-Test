@@ -122,14 +122,14 @@ public class PlugNCharge extends Protocol{
         response = Keyboard.next();
         if (response.equals("y")){
             PnCLink();
-            System.out.println("\nThank you for your time. We look forward to seeing you soon!\n");
+            System.out.println("\t\t\t\t\t\t\t\t\t\t\n\nThank you for your time. We look forward to seeing you soon!\n".toUpperCase(Locale.ROOT));
         }
         else {
             System.out.println("\nThat's fine! If you decide to change your mind, then visit our website: \n");
             try {
                 System.out.println("https://www.hubject.com/products/plug-and-charge\n\n");
                 Thread.sleep(3000);
-                System.out.println("Thank you for your time. We look forward to seeing you soon!\n");
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\n\nThank you for your time. We look forward to seeing you soon!\n".toUpperCase(Locale.ROOT));
                 Thread.sleep(3000);
             }
             catch (InterruptedException e) {
@@ -151,7 +151,7 @@ public class PlugNCharge extends Protocol{
 
         //Adding Author Cred.
         Author Dante = new Author("Danté Whyte",23,"British Jamaican","Male");
-        System.out.println("\nCreated by " + Dante.name + " ©");
+        System.out.println("\n\n© " + Dante.name);
         System.exit(0);
     }
 
