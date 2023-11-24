@@ -1,5 +1,7 @@
 package course.mainMethod;
 
+import java.awt.*;
+import java.net.URI;
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.Objects;
@@ -14,6 +16,7 @@ public class PlugNCharge extends Protocol{
     public static void main(String[] args) {
         Scanner Keyboard = new Scanner(System.in);
         String onboarding;
+        String response;
         PnC();
         String[] OEMs= {"Volkswagen", "Audi", "Porsche", "Skoda", "Cupra", "Lucid", "Mercedes-Benz", "MAN",
                 "Genesis","Hyundai","BMW Group", "Kia"};
@@ -114,8 +117,42 @@ public class PlugNCharge extends Protocol{
 
         responsilibities();
 
+        //Access to the website
+        System.out.print("\nWould you like to visit the Plug&Charge website? (y/n) : ");
+        response = Keyboard.next();
+        if (response.equals("y")){
+            PnCLink();
+            System.out.println("\nThank you for your time. We look forward to seeing you soon!\n");
+        }
+        else {
+            System.out.println("\nThat's fine! If you decide to change your mind, then visit our website: \n");
+            try {
+                System.out.println("https://www.hubject.com/products/plug-and-charge\n\n");
+                Thread.sleep(3000);
+                System.out.println("Thank you for your time. We look forward to seeing you soon!\n");
+                Thread.sleep(3000);
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+                System.out.print("\n");
+            }
+        }
+
+        for (int i = 0; i < 170; i++) {
+            System.out.print("=");
+            try {
+                Thread.sleep(30);
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+                System.out.print("\n");
+            }
+        }
+
+        //Adding Author Cred.
         Author Dante = new Author("Danté Whyte",23,"British Jamaican","Male");
         System.out.println("\nCreated by " + Dante.name + " ©");
+        System.exit(0);
     }
 
     //Title & Introduction to PnC
@@ -192,7 +229,7 @@ public class PlugNCharge extends Protocol{
             System.out.println(  "eMobility Service Provider / Mobility Operator: Provider of eMobility services supporting Plug&Charge functionality and signing charging contracts with EV drivers.\n");
             Thread.sleep(5000);
             System.out.println("Electric Vehicle Original Equipment Manufacturer: EV Original Equipment manufacturer, responsible for the software/hardware Plug&Charge implementation in the EV.\n\n");
-            Thread.sleep(5000);
+            Thread.sleep(2000);
         }
         catch (InterruptedException e) {
             throw new RuntimeException(e);
@@ -206,7 +243,25 @@ public class PlugNCharge extends Protocol{
                 System.out.print("\n");
             }
         }
+
     }
 
-}
+    //PnC Website
+    public static void PnCLink() {
+            if (!Desktop.isDesktopSupported()) {
+                System.out.println("Desktop is not supported");
+                return;
+            }
+
+            Desktop desktop = Desktop.getDesktop();
+            try {
+                URI uri = new URI("https://www.hubject.com/products/plug-and-charge");
+                desktop.browse(uri);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
 
