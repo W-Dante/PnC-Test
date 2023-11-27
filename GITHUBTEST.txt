@@ -1,1 +1,4 @@
 This is a description of the GithubTest! This is designed to practice the skills within Github, Git and Terminal. There will be some errors but after some time, these will be discovered and refactored.
+
+
+Want to find new features to the programm 
